@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document1</title>
+    <title>Array Traversing</title>
+    <script>
+      let data = [9, 45, 2, 8, 45, 23, 7, 78, 0, 11, 41, 77];
+      // for(let i=0;i<data.length;i++)
+      // {
+      //     document.write(`Array ${i} is ${data[i]} <br>`)
+      // }
+      // let x=10;
+      // document.write(data[x]);
+      function getElement() {
+        let array = document.getElementById("element").value;
+        if (array < data.length && typeof parseInt(array) === "number") {
+          alert(data[array]);
+        } else {
+          alert("Invalid Input");
+        }
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <input type="text" id="element" />
+    <button onclick="getElement()">Get Element</button>
+  </body>
 </html>
